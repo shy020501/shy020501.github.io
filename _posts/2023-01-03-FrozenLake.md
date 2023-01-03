@@ -3,6 +3,8 @@ layout: single
 title:  "Frozen Lake using Q-Learning"
 ---
 
+<br>
+
 # What is Frozen Lake?
 
 Frozen lake는 Gym Documents(강화학습을 위한 standard API)에 있는 Toy Text Environment 중 하나입니다.
