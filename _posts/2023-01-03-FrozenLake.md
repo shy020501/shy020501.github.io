@@ -12,9 +12,9 @@ author_profile: false
 
 Frozen lake는 Gym Documents(강화학습을 위한 standard API)에 있는 Toy Text Environment 중 하나입니다.
 
-![Frozen Lake gif](../../images/2023-01-03-FrozenLake/Frozen Lake.gif)     ![Frozen Lake png](../../images/2023-01-03-FrozenLake/Frozen Lake.png)
+![Frozen Lake gif](../../images/2023-01-03-FrozenLake/Frozen Lake.gif)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Frozen Lake png](../../images/2023-01-03-FrozenLake/Frozen Lake.png)
 
-Frozen Lake의 목적은 시작점(S)에서 구멍(H)에 빠지지 않고 얼음판(F) 위를 걸어 목적지(G)에 도달하는 것입니다. Agent는 4가지 action(상,하,좌,우)를 실행할 수 있고(다만, 미끄럼 기능(is_slippery)을 false로 설정해두지 않으면, 일정 확률로 이상한 방향으로 움직일 수 있습니다), 각 행동에 대한 보상(reward)은 아래와 같습니다:
+Frozen Lake의 목적은 시작점(S)에서 구멍(H)에 빠지지 않고 얼음판(F) 위를 걸어 목적지(G)에 도달하는 것입니다. Agent는 4가지 action(상,하,좌,우)을 실행할 수 있고(다만, 미끄럼 기능(is_slippery)을 false로 설정해두지 않으면, 일정 확률로 이상한 방향으로 움직일 수 있습니다), 각 행동에 대한 보상(reward)은 아래와 같습니다:
 
 * 목적지(G) 도달: +1
 * 얼음판(F) 도달: 0
