@@ -3,7 +3,20 @@ layout: single
 title:  "Frozen Lake using Q-Learning"
 ---
 
+# What is Frozen Lake?
+
+Frozen lake는 Gym Documents(강화학습을 위한 standard API)에 있는 Toy Text Environment 중 하나입니다.
+
+![Frozen Lake](../images/2023-01-03-FrozenLake/Frozen Lake.gif)
+
+Frozen Lake의 목적은 시작점(S)에서 구멍(H)에 빠지지 않고 얼음판(F) 위를 걸어 목적지(G)에 도달하는 것입니다. Agent는 4가지 action(상,하,좌,우)를 실행할 수 있고(다만, 미끄럼 기능(is_slippery)을 false로 설정해두지 않으면, 일정 확률로 이상한 방향으로 움직일 수 있습니다), 각 행동에 대한 보상(reward)은 아래와 같습니다:
+
+* 목적지(G) 도달: +1
+* 얼음판(F) 도달: 0
+* 구멍(H) 도달: 0
+
 <br>
+
 # Libraries to import
 
 
@@ -39,7 +52,7 @@ qtable = np.zeros((state_space_size, action_space_size))
 
 
 * Learning rate(α): 새로 학습한 값을 얼마나 수용할지 나타냅니다 (0~1).
-* Discount rate(γ): 시간(step)이 지날 수록 reward의 가치가 얼마나 떨어질지 정합니다 (0~1).
+* Discount rate(γ): 시간(step)이 지날 수록 보상(reward)의 가치가 얼마나 떨어질지 정합니다 (0~1).
 * ε-Greedy policy: ε의 확률만큼 가장 큰 Q값을 뽑도록 행동(Exploit)하지 않고 도전(Exploration)을 합니다 (0~1).
 
 
@@ -145,5 +158,5 @@ env.close()
 * Q-Learning을 통해 Frozen Lake 과제를 성공적으로 해결한 것을 확인할 수 있습니다.
 * 10000개의 episode를 통해 학습해본 결과, average reward(score)는 0.87~0.88 정도가 나온 것을 확인할 수 있었습니다.
 * 해당 문제에서 Learning rate(α)를 바꿔서 실험해봐도 성능에 큰 차이는 없었습니다.
-* Gym library에서, reward의 기본값을 구멍에 빠지는 경우 0으로 설정해두어(그냥 일반 빙판도 똑같이 reward가 0입니다), 이를 -1로 바꿔봤음에도 성능적인 면에서 큰 차이는 없었습니다.
+* 앞서 설명하였듯, 구멍에 빠졌을 때의 보상(reward)은 기본값이 0이어서, 이를 -1로 바꿔봤음에도 성능적인 면에서 큰 차이는 없었습니다.
 * 미끄럼 기능(is_slippery)를 활성화 해놓은 뒤, 같은 알고리즘을 실행해본 결과, 제대로 학습이 이루어지지 않았습니다. 똑같이 10000개의 episode를 통해 학습해본 결과 average reward(score)은 겨우 0.07 정도 밖에 나오지 않았습니다.
