@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "Frozen Lake using Q-Learning"
-categories: ReinforcementLearning
-tag: [Python, Reinforcement&nbsp;Learning, Gym API]
+categories: Reinforcement&nbsp;Learning
+tag: [Python, Reinforcement Learning, Gym API]
 ---
 
 <br>
