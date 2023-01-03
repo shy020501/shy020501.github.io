@@ -5,7 +5,7 @@ title:  "Frozen Lake using Q-Learning"
 
 <br>
 # Libraries to import
-<br>
+
 
 ```python
 !pip install gym
@@ -21,7 +21,7 @@ import random
 ```
 <br>
 # Creating an environment
-<br>
+
 
 ```python
 env = gym.make("FrozenLake-v1", is_slippery = False, render_mode="human")
@@ -36,7 +36,7 @@ qtable = np.zeros((state_space_size, action_space_size))
 ```
 <br>
 # Training Variables
-<br>
+
 
 * Learning rate(α): 새로 학습한 값을 얼마나 수용할지 나타냅니다 (0~1).
 * Discount rate(γ): 시간(step)이 지날 수록 reward의 가치가 얼마나 떨어질지 정합니다 (0~1).
@@ -57,7 +57,7 @@ decay_rate = 0.001
 ```
 <br>
 # Training with Q-Learning
-<br>
+
 
 * 위에 있는 두 줄을 주석 해제 하면 학습 과정을 시각적으로 볼 수 있습니다.
 
@@ -100,7 +100,7 @@ env.close()
 ```
 <br>
 # Testing the agent
-<br>
+
 
 * 테스트 횟수는 'test_episodes' 변수를 바꿔 조정할 수 있습니다.
 * 다만, agent가 매번 가장 높은 Q 값을 뽑도록 (Greedy policy) 설정해 두어서, 테스트 횟수를 늘려도 agent는 매번 같은 동작을 반복할 것입니다.
@@ -140,7 +140,7 @@ env.close()
 ```
 <br>
 # Conclusion
-<br>
+
 
 * Q-Learning을 통해 Frozen Lake 과제를 성공적으로 해결한 것을 확인할 수 있습니다.
 * 10000개의 episode를 통해 학습해본 결과, 평균 Reward(Score)는 0.87~0.88 정도가 나온 것을 확인할 수 있었습니다.
