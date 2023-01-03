@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "개발 블로그"
+title                    : "인공지능은 사실 바보가 아닐까"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Seunghyo Yun"
-description              : "공부한 거 올리는 블로그입니다"
+description              : "머신러닝 공부한 거 올리는 블로그입니다"
 url                      : "https://shy020501.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Seunghyo Yun"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "공부한 거 올리는 블로그입니다"
+  bio              : "머신러닝 공부한 거 올리는 블로그입니다"
   location         : "Seoul, Korea"
   email            : shy020501@naver.com
   links:
