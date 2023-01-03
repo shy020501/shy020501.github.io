@@ -1,6 +1,7 @@
 ---
 layout: single
 title:  "Frozen Lake using Q-Learning"
+categories: 강화학습(Reinforcement Learning)
 ---
 
 <br>
