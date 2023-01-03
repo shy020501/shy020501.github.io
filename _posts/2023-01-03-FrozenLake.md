@@ -1,4 +1,9 @@
-## Libraries to import
+---
+layout: single
+title:  "Frozen Lake using Q-Learning"
+---
+
+# Libraries to import
 
 
 ```python
@@ -14,7 +19,7 @@ import numpy as np
 import random
 ```
 
-## Creating an environment
+# Creating an environment
 
 
 ```python
@@ -29,7 +34,7 @@ state_space_size = env.observation_space.n
 qtable = np.zeros((state_space_size, action_space_size))
 ```
 
-## Training Variables
+# Training Variables
 
 
 
@@ -46,7 +51,7 @@ min_epsilon = 0.01
 decay_rate = 0.001
 ```
 
-## Training with Q-Learning
+# Training with Q-Learning
 
 * By uncommenting two lines at the top, training process could be visually seen
 
@@ -88,7 +93,7 @@ for episode in range(total_episodes):
 env.close()
 ```
 
-## Testing the agent
+# Testing the agent
 
 * Number of tests could be modifies through changing 'test_episode' variable
 * However, since the agent is set to choose an optimal Q (Greedy policy), the action that the agent will take would be the same for every single test
