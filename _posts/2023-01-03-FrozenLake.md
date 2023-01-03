@@ -42,10 +42,10 @@ env = gym.make("FrozenLake-v1", is_slippery = False, render_mode="human")
 
 
 ```python
-action_space_size = env.action_space.n
-state_space_size = env.observation_space.n
+action_space_size = env.action_space.n # 가능한 action의 수를 return(= 4)
+state_space_size = env.observation_space.n # 가능한 state의 수를 return(= 16)
 
-qtable = np.zeros((state_space_size, action_space_size))
+qtable = np.zeros((state_space_size, action_space_size)) # action * state 크기의 qtable 제작 (전부 0으로 초기화)
 ```
 <br>
 # Training Variables
@@ -58,12 +58,12 @@ qtable = np.zeros((state_space_size, action_space_size))
 
 ```python
 total_episodes = 10000
-max_step = 100 # Prevents infinite loop
+max_step = 100 # 무한루프가 발생하는 것을 방지
 
 alpha = 0.2 # Learning rate
 gamma = 0.001 # Discount rate
 
-epsilon = 1 # For ε-Greedy policy
+epsilon = 1 # ε-Greedy policy
 max_epsilon = 1
 min_epsilon = 0.01
 decay_rate = 0.001
@@ -89,24 +89,24 @@ for episode in range(total_episodes):
     episode_reward = 0
     
     for step in range(max_steps):
-        if(random.uniform(0,1) > epsilon):
-            action = np.argmax(qtable[state,:]) # Exploit: Pick an action that maximises Q from the qtable
+        if(random.uniform(0,1) > epsilon): # ε의 확률로 Exploration
+            action = np.argmax(qtable[state,:]) # Exploit: 가장 큰 Q(s,a) 값을 도출하는 action을 return
         else:
-            action = env.action_space.sample() # Exploration: Picks a random action
+            action = env.action_space.sample() # Exploration: 랜덤한 action을 샘플
         
-        new_state, reward, terminated, truncated, info = env.step(action) # Return values of .step() function
+        new_state, reward, terminated, truncated, info = env.step(action) # .step()의 return값들
         
-        # Q-Learning equation
+        # Q-Learning 공식
         qtable[state,action] = (1 - learning_rate) * qtable[state,action] + learning_rate * (reward + gamma * np.max(qtable[new_state,:]) - qtable[state, action])
         
-        state = new_state
+        state = new_state # Agent의 state를 새로운 state로 바꿔줌
         
         if(terminated):
             break
             
         episode_reward += reward
         
-    epsilon = min_epsilon + (max_epsilon - min_epsilon)*np.exp(-decay_rate * (episode)) # Exponentially decrease ε to become Greedy policy
+    epsilon = min_epsilon + (max_epsilon - min_epsilon)*np.exp(-decay_rate * (episode)) # 지수적으로 ε를 줄여 점점 Greedy policy에 가까워지게끔 함 (= Exploration을 덜 하게 됨)
     rewards.append(episode_reward)
         
 env.close()
@@ -125,7 +125,7 @@ env.reset()
 env.render()
 
 ave_reward = 0
-test_episodes = 1 # Number of episodes to change
+test_episodes = 1 # 테스트 해볼 episode 수
 
 for episode in range(test_episodes):
     env.reset()
@@ -135,7 +135,7 @@ for episode in range(test_episodes):
     print("Episode:", episode + 1)
     
     for step in range(max_steps):
-        action = np.argmax(qtable[state,:]) # Exploit: Pick an action that maximises Q from the qtable
+        action = np.argmax(qtable[state,:]) # Exploit: 가장 큰 Q(s,a) 값을 도출하는 action을 return
         new_state, reward, terminated, truncated, info =  env.step(action)
         
         ave_reward += reward
