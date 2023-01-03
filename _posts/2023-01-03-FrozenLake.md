@@ -3,7 +3,6 @@ layout: single
 title:  "Frozen Lake using Q-Learning"
 categories: RL
 tag: [Python, Reinforcement Learning, Gym API]
-author_profile: false
 ---
 
 <br>
