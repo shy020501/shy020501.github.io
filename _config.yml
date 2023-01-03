@@ -121,7 +121,7 @@ author:
       url: "https://github.com/shy020501"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/shy020501"
+      url: "https://instagram.com/seunghyoyun"
 
 # Site Footer
 footer:
@@ -131,7 +131,7 @@ footer:
       url: "https://github.com/shy020501"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/shy020501"
+      url: "https://instagram.com/seunghyoyun"
 
 
 # Reading Files
@@ -239,16 +239,16 @@ tag_archive:
   type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
 
 # HTML Compression
