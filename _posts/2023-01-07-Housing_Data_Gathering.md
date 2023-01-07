@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "[ML] 1. 데이터 가져오기 - Housing Price"
-categories: Reinforcement_Learning
-tag: [Python, Reinforcement Learning, Gym API]
+categories: Machine_Learning
+tag: [Python, Machine Learning, Numpy, Matplotlib, Pandas, SciKit-Learn]
 ---
 
 <br>
