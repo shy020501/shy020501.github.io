@@ -13,6 +13,8 @@ tag: [Python, Machine Learning, Numpy, Matplotlib, Pandas, SciKit-Learn]
 
 ![California Housing Price](../../images/2023-01-07-Housing_Data_Gathering/california_housing_price.png)
 
+<br>
+
 # 데이터 다운로드
 * CSV(Comma-Separated Value) 파일인 housing.csv를 압축한 tar 파일(.tgz)을 내려받아 데이터 수집합니다.
 
