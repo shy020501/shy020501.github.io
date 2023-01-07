@@ -1,20 +1,24 @@
 ---
 layout: single
+<<<<<<< HEAD
 title:  "Frozen Lake using Q-Learning"
 categories: Reinforcement_Learning
+=======
+title:  "(Q-Learning) Frozen Lake 문제 풀이"
+categories: RL
+>>>>>>> 45f489d4da0c68d4c011a84bd30cb003fd759927
 tag: [Python, Reinforcement Learning, Gym API]
-author_profile: false
 ---
 
 <br>
 
-# What is Frozen Lake?
+# Frozen Lake란?
 
 Frozen lake는 Gym Documents(강화학습을 위한 standard API)에 있는 Toy Text Environment 중 하나입니다.
 
-![Frozen Lake gif](../../images/2023-01-03-FrozenLake/Frozen Lake.gif)     ![Frozen Lake png](../../images/2023-01-03-FrozenLake/Frozen Lake.png)
+![Frozen Lake gif](../../images/2023-01-03-FrozenLake/Frozen Lake.gif)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Frozen Lake png](../../images/2023-01-03-FrozenLake/Frozen Lake.png)
 
-Frozen Lake의 목적은 시작점(S)에서 구멍(H)에 빠지지 않고 얼음판(F) 위를 걸어 목적지(G)에 도달하는 것입니다. Agent는 4가지 action(상,하,좌,우)를 실행할 수 있고(다만, 미끄럼 기능(is_slippery)을 false로 설정해두지 않으면, 일정 확률로 이상한 방향으로 움직일 수 있습니다), 각 행동에 대한 보상(reward)은 아래와 같습니다:
+Frozen Lake의 목적은 시작점(S)에서 구멍(H)에 빠지지 않고 얼음판(F) 위를 걸어 목적지(G)에 도달하는 것입니다. Agent는 4가지 action(상,하,좌,우)을 실행할 수 있고(다만, 미끄럼 기능(is_slippery)을 false로 설정해두지 않으면, 일정 확률로 이상한 방향으로 움직일 수 있습니다), 각 행동에 대한 보상(reward)은 아래와 같습니다:
 
 * 목적지(G) 도달: +1
 * 얼음판(F) 도달: 0
@@ -22,7 +26,11 @@ Frozen Lake의 목적은 시작점(S)에서 구멍(H)에 빠지지 않고 얼음
 
 <br>
 
+<<<<<<< HEAD
 # Packages
+=======
+# Import Libraries
+>>>>>>> 45f489d4da0c68d4c011a84bd30cb003fd759927
 
 
 ```python
@@ -38,7 +46,7 @@ import numpy as np
 import random
 ```
 <br>
-# Creating an environment
+# Frozen Lake 환경 구축
 
 
 ```python
@@ -53,7 +61,7 @@ state_space_size = env.observation_space.n # 가능한 state의 수를 return(= 
 qtable = np.zeros((state_space_size, action_space_size)) # action * state 크기의 qtable 제작 (전부 0으로 초기화)
 ```
 <br>
-# Training Variables
+# 변수 설정
 
 
 * Learning rate(α): 새로 학습한 값을 얼마나 수용할지 나타냅니다 (0~1).
@@ -74,7 +82,7 @@ min_epsilon = 0.01
 decay_rate = 0.001
 ```
 <br>
-# Training with Q-Learning
+# Q-Learning을 통한 학습 
 
 
 * 위에 있는 두 줄을 주석 해제 하면 학습 과정을 시각적으로 볼 수 있습니다.
@@ -117,7 +125,7 @@ for episode in range(total_episodes):
 env.close()
 ```
 <br>
-# Testing the agent
+# 테스트 알고리즘
 
 
 * 테스트 횟수는 'test_episodes' 변수를 바꿔 조정할 수 있습니다.
@@ -157,10 +165,10 @@ print("Average reward:", ave_reward/test_episodes)
 env.close()
 ```
 <br>
-# Conclusion
+# 결론
 
 
-* Q-Learning을 통해 Frozen Lake 과제를 성공적으로 해결한 것을 확인할 수 있습니다.
+* Q-Learning을 통해 Frozen Lake 문제를 성공적으로 해결한 것을 확인할 수 있습니다.
 * 10000개의 episode를 통해 학습해본 결과, average reward(score)는 0.87~0.88 정도가 나온 것을 확인할 수 있었습니다.
 * 해당 문제에서 Learning rate(α)를 바꿔서 실험해봐도 성능에 큰 차이는 없었습니다.
 * 앞서 설명하였듯, 구멍에 빠졌을 때의 보상(reward)은 기본값이 0이어서, 이를 -1로 바꿔봤음에도 성능적인 면에서 큰 차이는 없었습니다.
