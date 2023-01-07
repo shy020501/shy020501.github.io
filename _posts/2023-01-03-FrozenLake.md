@@ -1,12 +1,7 @@
 ---
 layout: single
-<<<<<<< HEAD
-title:  "Frozen Lake using Q-Learning"
-categories: Reinforcement_Learning
-=======
 title:  "(Q-Learning) Frozen Lake 문제 풀이"
-categories: RL
->>>>>>> 45f489d4da0c68d4c011a84bd30cb003fd759927
+categories: Reinforcement_Learning
 tag: [Python, Reinforcement Learning, Gym API]
 ---
 
@@ -26,11 +21,7 @@ Frozen Lake의 목적은 시작점(S)에서 구멍(H)에 빠지지 않고 얼음
 
 <br>
 
-<<<<<<< HEAD
-# Packages
-=======
 # Import Libraries
->>>>>>> 45f489d4da0c68d4c011a84bd30cb003fd759927
 
 
 ```python
