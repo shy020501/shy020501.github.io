@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "(Q-Learning) Frozen Lake 문제 풀이"
-categories: Reinforcement_Learning
+categories: RL
 tag: [Python, Reinforcement Learning, Gym API]
 ---
 
