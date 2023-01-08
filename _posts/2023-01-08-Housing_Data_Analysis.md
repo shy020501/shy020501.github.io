@@ -1,5 +1,14 @@
-# 전 내용 요약
+---
+layout: single
+title:  "[ML] 2. 데이터 탐색과 시각화 - Housing Price"
+categories: Machine_Learning
+tag: [Python, Machine Learning, Numpy, Matplotlib, Pandas, SciKit-Learn]
+toc: True
+---
 
+<br>
+
+# 전 내용 요약
 
 ```python
 %matplotlib inline  
@@ -27,6 +36,7 @@ for train_index, test_index in split.split(housing, housing["income_cat"]):
     strat_train_set = housing.loc[train_index]
     strat_test_set = housing.loc[test_index]
 ```
+<br>
 
 # 지리적 데이터 시각화
 
@@ -38,18 +48,9 @@ housing = strat_train_set.copy() # 훈련 세트를 손상시키지 않기 위�
 housing.plot(kind = "scatter", x = "longitude", y = "latitude") # 위도, 경도를 이용하여 산점도 제작
 ```
 
-
-
-
-    <AxesSubplot: xlabel='longitude', ylabel='latitude'>
-
-
-
-
     
-![png](output_4_1.png)
+![데이터 시각화 (산점도)](../../images/2023-01-08-Housing_Data_Analysis/scatterplot.png)
     
-
 
 ## 밀집도 추가
 
@@ -57,19 +58,9 @@ housing.plot(kind = "scatter", x = "longitude", y = "latitude") # 위도, 경도
 ```python
 housing.plot(kind = "scatter", x = "longitude", y = "latitude", alpha = 0.1)
 ```
-
-
-
-
-    <AxesSubplot: xlabel='longitude', ylabel='latitude'>
-
-
-
-
     
-![png](output_6_1.png)
+![알파값 추가 산점도](../../images/2023-01-08-Housing_Data_Analysis/scatterplot_with_alpha.png)
     
-
 
 ## 주택 가격 추가
 * s: 원의 반지름 (구역의 인구)
@@ -84,18 +75,10 @@ housing.plot(kind = "scatter", x = "longitude", y = "latitude", alpha = 0.1,
 plt.legend()
 ```
 
-
-
-
-    <matplotlib.legend.Legend at 0x28854603f40>
-
-
-
-
-    
-![png](output_8_1.png)
+![주택 가격 추가 산점도](../../images/2023-01-08-Housing_Data_Analysis/scatterplot_with_house_value.png)
     
 
+<br>
 
 # 데이터 상관관계 조사
 
@@ -109,13 +92,6 @@ corr_matrix = housing.corr()
 
 corr_matrix["median_house_value"].sort_values(ascending = False)
 ```
-
-    C:\Users\shy02\AppData\Local\Temp\ipykernel_54800\3968440067.py:1: FutureWarning: The default value of numeric_only in DataFrame.corr is deprecated. In a future version, it will default to False. Select only valid columns or specify the value of numeric_only to silence this warning.
-      corr_matrix = housing.corr()
-    
-
-
-
 
     median_house_value    1.000000
     median_income         0.687151
@@ -144,33 +120,8 @@ attributes = ["median_house_value", "median_income", "total_rooms", "housing_med
 
 scatter_matrix(housing[attributes], figsize = (12,8))
 ```
-
-
-
-
-    array([[<AxesSubplot: xlabel='median_house_value', ylabel='median_house_value'>,
-            <AxesSubplot: xlabel='median_income', ylabel='median_house_value'>,
-            <AxesSubplot: xlabel='total_rooms', ylabel='median_house_value'>,
-            <AxesSubplot: xlabel='housing_median_age', ylabel='median_house_value'>],
-           [<AxesSubplot: xlabel='median_house_value', ylabel='median_income'>,
-            <AxesSubplot: xlabel='median_income', ylabel='median_income'>,
-            <AxesSubplot: xlabel='total_rooms', ylabel='median_income'>,
-            <AxesSubplot: xlabel='housing_median_age', ylabel='median_income'>],
-           [<AxesSubplot: xlabel='median_house_value', ylabel='total_rooms'>,
-            <AxesSubplot: xlabel='median_income', ylabel='total_rooms'>,
-            <AxesSubplot: xlabel='total_rooms', ylabel='total_rooms'>,
-            <AxesSubplot: xlabel='housing_median_age', ylabel='total_rooms'>],
-           [<AxesSubplot: xlabel='median_house_value', ylabel='housing_median_age'>,
-            <AxesSubplot: xlabel='median_income', ylabel='housing_median_age'>,
-            <AxesSubplot: xlabel='total_rooms', ylabel='housing_median_age'>,
-            <AxesSubplot: xlabel='housing_median_age', ylabel='housing_median_age'>]],
-          dtype=object)
-
-
-
-
     
-![png](output_14_1.png)
+![산점도 행렬](../../images/2023-01-08-Housing_Data_Analysis/scatterplot_matrix.png)
     
 
 
@@ -185,18 +136,11 @@ scatter_matrix(housing[attributes], figsize = (12,8))
 housing.plot(kind = "scatter", x = "median_income", y = "median_house_value", alpha = 0.1)
 ```
 
-
-
-
-    <AxesSubplot: xlabel='median_income', ylabel='median_house_value'>
-
-
-
-
     
-![png](output_16_1.png)
+![중간 소득 대 주택가격](../../images/2023-01-08-Housing_Data_Analysis/median_income_median_house_value.png)
     
 
+<br>
 
 # 특성 조합
 * 머신러닝 알고리즘 용 데이터를 준비하기 위해 마지막으로 할 수 있는 것은 여러가지 특성들을 조합해보는 것입니다.
@@ -213,13 +157,6 @@ corr_matrix = housing.corr()
 corr_matrix["median_house_value"].sort_values(ascending = False)
 ```
 
-    C:\Users\shy02\AppData\Local\Temp\ipykernel_54800\3891066511.py:5: FutureWarning: The default value of numeric_only in DataFrame.corr is deprecated. In a future version, it will default to False. Select only valid columns or specify the value of numeric_only to silence this warning.
-      corr_matrix = housing.corr()
-    
-
-
-
-
     median_house_value          1.000000
     median_income               0.687151
     rooms_per_household         0.146255
@@ -235,8 +172,4 @@ corr_matrix["median_house_value"].sort_values(ascending = False)
     Name: median_house_value, dtype: float64
 
 
-
-
-```python
-
-```
+출처: 오렐리앙 제롱, 「핸즈온 머신러닝 2판」, 박해선, 한빛미디어(2020)
