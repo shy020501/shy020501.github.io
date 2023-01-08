@@ -171,5 +171,6 @@ corr_matrix["median_house_value"].sort_values(ascending = False)
     bedrooms_per_room          -0.259952
     Name: median_house_value, dtype: float64
 
+<br>
 
 출처: 오렐리앙 제롱, 「핸즈온 머신러닝 2판」, 박해선, 한빛미디어(2020)
