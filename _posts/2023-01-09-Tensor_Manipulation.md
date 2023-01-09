@@ -1,3 +1,13 @@
+---
+layout: single
+title:  "[PyTorch] PyTorch 기본 연산"
+categories: PyTorch
+tag: [Python, PyTorch, Machine Learning, Reinforcement Learning]
+toc: True
+---
+
+<br>
+
 # PyTorch Tensor
 
 ## 1D Array 만들기
@@ -68,6 +78,8 @@ print(t[:, :-1])# 첫 번째 차원에서는 다 가져오고, 두 번째 차원
             [ 6.,  7.],
             [ 9., 10.]])
     
+
+<br>
 
 # Broadcasting
 * 두 tensor의 크기가 다를 때, 자동적으로 크기를 조정해 연산을 도와주는 기능을 broadcast라고 합니다.
@@ -142,7 +154,9 @@ print(t1.matmul(t2)) # t1과 t2의 행렬 곱
             [11.]])
     
 
-# Mean
+<br>
+
+# 평균값
 
 ## 평균 구하기
 * Long 형태의 tensor에서는 평균을 구할 수 없습니다.
@@ -214,6 +228,8 @@ print(t.sum(dim = -1))
     tensor([3., 7.])
     
 
+<br>
+
 # Max와 Argmax
 * Max는 tensor에 대해서 가장 큰 값을 의미합니다.
 * Argmax는 가장 큰 값의 index를 의미합니다.
@@ -250,7 +266,9 @@ print("Argmax: ", t.max(dim = 0)[1])
     Argmax:  tensor([1, 1])
     
 
-# 그 외 기능들
+<br>
+
+# 그 외 연산들
 
 ## View
 * View 함수는 tensor의 크기를 변경시켜주는(reshape) 역할을 합니다.
@@ -550,3 +568,8 @@ print(t)
     tensor([[2., 4.],
             [6., 8.]])
     
+
+
+<br>
+
+출처 | "[PyTorch] Lab-01-1 Tensor Manipulation 1 & 2", Deep Learning Zero To All, https://www.youtube.com/playlist?list=PLQ28Nx3M4JrhkqBVIXg-i5_CVVoS1UzAv
