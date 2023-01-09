@@ -173,4 +173,4 @@ corr_matrix["median_house_value"].sort_values(ascending = False)
 
 <br>
 
-출처: 오렐리앙 제롱, 「핸즈온 머신러닝 2판」, 박해선, 한빛미디어(2020)
+출처 | 오렐리앙 제롱, 「핸즈온 머신러닝 2판」, 박해선, 한빛미디어(2020)
