@@ -17,7 +17,7 @@ toc: True
 
 * H(x) = σ(x * W + b)
 * (m,d) 크기의 행렬 x와 (d, 1) 크기의 행렬 W가 있을 때:
-  * |x * W| = (m, d) * (d, 1) = (m, 1)
+  * &#124;x * W&#124; = (m, d) * (d, 1) = (m, 1)
   * 즉, 주어진 x에 W(weight)를 곱해주면 binary 정보가 담긴 (m,1) 행렬 y를 찾을 수 있습니다.
 
 ![로지스틱 회귀](../../images/2023-01-10-Logistic_Regression/Logistic_regression.png)
