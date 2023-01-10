@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[ML] 1. 데이터 가져오기 - Housing Price"
+title:  "[ML] 1. Housing Price - 데이터 가져오기"
 categories: Machine_Learning
 tag: [Python, Machine Learning, Numpy, Matplotlib, Pandas, SciKit-Learn]
 toc: True

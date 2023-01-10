@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[ML] 2. 데이터 탐색과 시각화 - Housing Price"
+title:  "[ML] 2. Housing Price - 데이터 탐색과 시각화"
 categories: Machine_Learning
 tag: [Python, Machine Learning, Numpy, Matplotlib, Pandas, SciKit-Learn]
 toc: True
