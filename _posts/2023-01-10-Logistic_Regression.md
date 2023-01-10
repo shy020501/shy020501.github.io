@@ -13,7 +13,7 @@ toc: True
 * 시그모이드(σ(x)) 함수는 0과 1중 하나의 값(binary)을 반환합니다.
 * 이를 이용하여, 주어진 x값과 Weight(W)를 이용해 H(x)값을 구할 수 있습니다.
 
-![시그모이드 함수](../../images/2023-01-10-Logistic_Regression/Singmoid.png)
+![시그모이드 함수](../../images/2023-01-10-Logistic_Regression/Sigmoid.png)
 
 * H(x) = σ(x * W + b)
 * (m,d) 크기의 행렬 x와 (d, 1) 크기의 행렬 W가 있을 때:
