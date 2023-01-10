@@ -2,7 +2,7 @@
 layout: single
 title:  "[PyTorch] PyTorch 기본 연산"
 categories: PyTorch
-tag: [Python, PyTorch, Machine Learning, Reinforcement Learning]
+tag: [Python, PyTorch, Machine Learning]
 toc: True
 ---
 

@@ -1,7 +1,17 @@
+---
+layout: single
+title:  "[PyTorch] 선형회귀"
+categories: PyTorch
+tag: [Python, PyTorch, Machine Learning]
+toc: True
+---
+
+<br>
+
 # 선형회귀 (Linear Regression)
 * y = W * x + b (W는 weight, b는 bias입니다.)
 
-[Image 1]
+![학습 데이터셋 1](../../images/2023-01-10-Linear_Regression/Training_Dataset_1.png)
 
 
 ```python
@@ -57,11 +67,13 @@ for epoch in range(1, nb_epochs + 1):
     optimiser.step()
 ```
 
+<br>
+
 # Gradient Descent (without Optim)
 * y = W * x
 * Weight 밖에 학습하지 못하기에 실제로 사용하기에는 무리가 있으나, Gradient Descent의 개념을 이해하기 위해 bias를 빼도록 하겠습니다.
 
-[Image 2]
+![학습 데이터셋 2](../../images/2023-01-10-Linear_Regression/Training_Dataset_2.png)
 
 * 해당 예제에서 W가 1일 때 cost는 0이 되고, 1에서 멀어질 수록 높아집니다.
 * 따라서, cost를 줄이기 위해서는 gradient가 양수일 때는 W를 줄이고, 음수일 때는 W를 늘리면 됩니다.
@@ -159,10 +171,12 @@ for epoch in range(nb_epochs + 1):
     Epoch   10/10    	W: 1.000	Cost: 0.000000
     
 
+<br>
+
 # 다중 선형 회귀 (Multivariate Linear Regression)
 * 다중 선형 회귀는 다수의 x 값으로부터 y 값을 예측하는 것입니다.
 
-[Image 3]
+![학습 데이터셋 3](../../images/2023-01-10-Linear_Regression/Training_Dataset_3.png)
 
 * H(x)를 계산하는 방법은 2가지가 있습니다:
   * 방법 1:
@@ -226,6 +240,8 @@ for epoch in range(nb_epochs + 1):
     Epoch   19/20   hypothesis: tensor([154.0524, 185.1120, 175.7424, 198.6134, 141.2145])   Cost: 5.959664
     Epoch   20/20   hypothesis: tensor([154.0536, 185.1134, 175.7451, 198.6145, 141.2158])   Cost: 5.957089
     
+
+<br>
 
 # PyTorch 모듈 활용
 
@@ -316,6 +332,8 @@ for epoch in range(nb_epochs + 1):
     Epoch   19/20   hypothesis: tensor([153.6106, 185.5415, 175.2570, 198.7169, 141.5786])   Cost: 6.588500
     Epoch   20/20   hypothesis: tensor([153.6128, 185.5437, 175.2608, 198.7191, 141.5805])   Cost: 6.585258
     
+
+<br>
 
 # 많은 양의 데이터 분석
 
@@ -428,57 +446,7 @@ for epoch in range(nb_epochs + 1):
     Epoch    1/20 Batch 1/3 Cost: 1747.355225
     Epoch    1/20 Batch 2/3 Cost: 788.609619
     Epoch    1/20 Batch 3/3 Cost: 83.814842
-    Epoch    2/20 Batch 1/3 Cost: 61.407188
-    Epoch    2/20 Batch 2/3 Cost: 47.154518
-    Epoch    2/20 Batch 3/3 Cost: 1.573085
-    Epoch    3/20 Batch 1/3 Cost: 0.528568
-    Epoch    3/20 Batch 2/3 Cost: 11.780762
-    Epoch    3/20 Batch 3/3 Cost: 0.155980
-    Epoch    4/20 Batch 1/3 Cost: 7.185496
-    Epoch    4/20 Batch 2/3 Cost: 0.588306
-    Epoch    4/20 Batch 3/3 Cost: 0.296059
-    Epoch    5/20 Batch 1/3 Cost: 6.641660
-    Epoch    5/20 Batch 2/3 Cost: 2.504662
-    Epoch    5/20 Batch 3/3 Cost: 0.066988
-    Epoch    6/20 Batch 1/3 Cost: 6.969504
-    Epoch    6/20 Batch 2/3 Cost: 0.817236
-    Epoch    6/20 Batch 3/3 Cost: 2.177309
-    Epoch    7/20 Batch 1/3 Cost: 0.195941
-    Epoch    7/20 Batch 2/3 Cost: 8.973341
-    Epoch    7/20 Batch 3/3 Cost: 0.379227
-    Epoch    8/20 Batch 1/3 Cost: 1.039827
-    Epoch    8/20 Batch 2/3 Cost: 0.015303
-    Epoch    8/20 Batch 3/3 Cost: 14.998128
-    Epoch    9/20 Batch 1/3 Cost: 3.316312
-    Epoch    9/20 Batch 2/3 Cost: 6.385233
-    Epoch    9/20 Batch 3/3 Cost: 0.718314
-    Epoch   10/20 Batch 1/3 Cost: 6.037750
-    Epoch   10/20 Batch 2/3 Cost: 2.898014
-    Epoch   10/20 Batch 3/3 Cost: 0.164086
-    Epoch   11/20 Batch 1/3 Cost: 0.025057
-    Epoch   11/20 Batch 2/3 Cost: 0.453884
-    Epoch   11/20 Batch 3/3 Cost: 16.476767
-    Epoch   12/20 Batch 1/3 Cost: 2.390849
-    Epoch   12/20 Batch 2/3 Cost: 4.634770
-    Epoch   12/20 Batch 3/3 Cost: 6.022240
-    Epoch   13/20 Batch 1/3 Cost: 0.059228
-    Epoch   13/20 Batch 2/3 Cost: 7.548706
-    Epoch   13/20 Batch 3/3 Cost: 0.374786
-    Epoch   14/20 Batch 1/3 Cost: 1.053912
-    Epoch   14/20 Batch 2/3 Cost: 7.379338
-    Epoch   14/20 Batch 3/3 Cost: 0.805108
-    Epoch   15/20 Batch 1/3 Cost: 0.278761
-    Epoch   15/20 Batch 2/3 Cost: 6.308988
-    Epoch   15/20 Batch 3/3 Cost: 4.007633
-    Epoch   16/20 Batch 1/3 Cost: 0.370973
-    Epoch   16/20 Batch 2/3 Cost: 8.348041
-    Epoch   16/20 Batch 3/3 Cost: 0.428824
-    Epoch   17/20 Batch 1/3 Cost: 1.168038
-    Epoch   17/20 Batch 2/3 Cost: 0.003512
-    Epoch   17/20 Batch 3/3 Cost: 14.635855
-    Epoch   18/20 Batch 1/3 Cost: 2.698539
-    Epoch   18/20 Batch 2/3 Cost: 5.919295
-    Epoch   18/20 Batch 3/3 Cost: 1.349824
+    ... 중략 ...
     Epoch   19/20 Batch 1/3 Cost: 1.579122
     Epoch   19/20 Batch 2/3 Cost: 6.934173
     Epoch   19/20 Batch 3/3 Cost: 0.609065
@@ -498,7 +466,6 @@ print("훈련 후 입력이 73, 80, 75일 때의 예측값 :", pred_y)
     훈련 후 입력이 73, 80, 75일 때의 예측값 : tensor([[152.6124]], grad_fn=<AddmmBackward0>)
     
 
+<br>
 
-```python
-
-```
+출처 | "모두를 위한 딥러닝 시즌2", Deep Learning Zero To All, https://www.youtube.com/playlist?list=PLQ28Nx3M4JrhkqBVIXg-i5_CVVoS1UzAv
