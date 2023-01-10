@@ -344,6 +344,8 @@ for epoch in range(nb_epochs + 1):
 * 단점:
   * 전체 데이터를 쓰지 않아, 잘못된 방향으로 업데이트를 할 수 있습니다.
 
+![배치 대 미니배치](../../images/2023-01-10-Linear_Regression/batch_vs_minibatch.png)
+
 ## PyTorch Dataset
 * __len__(): 데이터셋의 총 데이터 수를 반환합니다.
 * __getitem__(): 어떠한 index를 받았을 때, 그에 상응하는 입출력 데이터를 반환합니다.
