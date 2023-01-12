@@ -116,7 +116,7 @@ print(cost)
     tensor(0.6931, grad_fn=<MeanBackward0>)
     
 
-### Cross Entropy를 이용한 코드
+### Binary Cross Entropy를 이용한 코드
 
 
 ```python
