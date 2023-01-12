@@ -11,7 +11,7 @@ toc: True
 # 소프트맥스(Softmax) 함수
 * k 차원의 벡터에서 j번째 원소를 x_j, j번째 클라스가 정답일 확률을 p_j로 나타낸다고 했을 때, softmax 함수는 p_j를 다음와 같이 정의합니다.
 
-![Softmax 공식](링크)
+![Softmax 공식](../images/2023-01-12-Softmax_Regression/Softmax_equation.png)
 
 * 예를 들어, 첫번째 결과 값은 j가 1이 되고, 아래와 같이 계산됩니다.
   * (e^1) / (e^1 + e^2 + e^3) = 0.09
@@ -45,11 +45,11 @@ print(hypothesis.sum())
 * Cross entropy는 두 확률 분포가 주어져 있을 때, 둘의 유사도를 나타내는 수치입니다.
 * 확률 분포 P와 Q가 주어졌을 때, cross entropy는 다음과 같이 정의됩니다.
 
-![Cross Entropy 공식](링크)
+![Cross Entropy 공식](../images/2023-01-12-Softmax_Regression/Cross_entropy_equation.png)
 
 * 이를 이용해, cross entropy loss를 다음과 같이 계산할 수 있습니다.
 
-![Cross Entropy Loss 공식](링크)
+![Cross Entropy Loss 공식](../images/2023-01-12-Softmax_Regression/Cross_entropy_loss_equation.png)
 
 * 아래의 예제에서, 클라스의 개수는 5개, 샘플의 개수는 3개입니다.
 * hypothesis에서 출력한 값은 예측값(prediction)으로, y^에 해당합니다.
