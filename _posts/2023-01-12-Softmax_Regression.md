@@ -1,3 +1,13 @@
+---
+layout: single
+title:  "[PyTorch] 소프트맥스 회귀"
+categories: PyTorch
+tag: [Python, PyTorch, Machine Learning]
+toc: True
+---
+
+<br>
+
 # 소프트맥스(Softmax) 함수
 * k 차원의 벡터에서 j번째 원소를 x_j, j번째 클라스가 정답일 확률을 p_j로 나타낸다고 했을 때, softmax 함수는 p_j를 다음와 같이 정의합니다.
 
@@ -28,6 +38,8 @@ print(hypothesis.sum())
     
     tensor(1.)
     
+
+<br>
 
 # Cross Entropy
 * Cross entropy는 두 확률 분포가 주어져 있을 때, 둘의 유사도를 나타내는 수치입니다.
@@ -315,6 +327,8 @@ for epoch in range(nb_epochs + 1):
     Epoch 1000/1000 Cost: 0.249264
     
 
+<br>
+
 # 소프트맥스 회귀 vs 로지스틱 회귀
 * 소프트맥스 회귀:
   * 여러개의 클라스가 있을 때 사용
@@ -322,3 +336,7 @@ for epoch in range(nb_epochs + 1):
 * 로지스틱 회귀:
   * 이진분류 문제일 경우 로지스틱 회귀 사용
   * Binary Cross Entropy loss와 시그모이드를 사용
+
+<br>
+
+출처 | "모두를 위한 딥러닝 시즌2", Deep Learning Zero To All, https://www.youtube.com/playlist?list=PLQ28Nx3M4JrhkqBVIXg-i5_CVVoS1UzAv
