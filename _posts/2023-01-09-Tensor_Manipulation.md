@@ -369,7 +369,7 @@ print(t.squeeze(dim = 1).shape)
     torch.Size([3])
     
 
-## unsqueeze
+## Unsqueeze
 * Squeeze와 반대로 원하는 차원을 하나 추가해줍니다.
 * 따라서, 호출할 때 인자를 꼭 넣어주어야 합니다.
 
@@ -572,4 +572,4 @@ print(t)
 
 <br>
 
-출처 | "[PyTorch] Lab-01-1 Tensor Manipulation 1 & 2", Deep Learning Zero To All, https://www.youtube.com/playlist?list=PLQ28Nx3M4JrhkqBVIXg-i5_CVVoS1UzAv
+출처 | "모두를 위한 딥러닝 시즌2", Deep Learning Zero To All, https://www.youtube.com/playlist?list=PLQ28Nx3M4JrhkqBVIXg-i5_CVVoS1UzAv
