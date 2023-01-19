@@ -83,7 +83,7 @@ print(y)
 
 ## Cross Entropy Loss (Low-level)
 * 원-핫 인코딩(One-hot encoding)은 선택해야하는 선택지의 개수만큼 차원을 가지면서, 각 선택지의 인덱스에 해당하는 원소에는 1, 나머지 원소는 0의 값을 가지도록 하는 표현 방법입니다.
-* scatter 함수는 텐서에 원하는 인덱스(index)에 알맞게 값(src)을 할당해줍니다.
+* scatter 메서드는 텐서에 원하는 인덱스(index)에 알맞게 값(src)을 할당해줍니다.
   * Syntax: .scatter_(dim, index, src, reduce=None)
 * y는 기존에 (3, ) 텐서였지만, unsqueeze 해줌으로써 (3, 1) 텐서가 됩니다.
   * y가 tensor([0, 3, 2])에서 tensor([[0], [3], [2]])가 되게 됩니다.
@@ -94,7 +94,7 @@ print(y)
 
 ```python
 y_one_hot = torch.zeros_like(hypothesis) # hypothesis와 같은 크기로 0으로 차있는 텐서 생성
-y_one_hot.scatter_(1, y.unsqueeze(1), 1) # _는 in-place 함수라는 의미
+y_one_hot.scatter_(1, y.unsqueeze(1), 1) # _는 in-place 메서드라는 의미
 print(y_one_hot)
 
 cost = (y_one_hot * -torch.log(hypothesis)).sum(dim=1).mean() # cross entropy loss 공식

@@ -246,7 +246,7 @@ for epoch in range(nb_epochs + 1):
 # PyTorch 모듈 활용
 
 ## nn.Module
-* nn.Module을 상속(inheritance)해서 모델을 생성하고, nn.Linear에 입력 차원과 출력 차원을 알려주고 hypothesis를 어떻게 계산하는지 forward 함수에서 알려주면 됩니다.
+* nn.Module을 상속(inheritance)해서 모델을 생성하고, nn.Linear에 입력 차원과 출력 차원을 알려주고 hypothesis를 어떻게 계산하는지 forward 메서드에서 알려주면 됩니다.
 
 
 ```python

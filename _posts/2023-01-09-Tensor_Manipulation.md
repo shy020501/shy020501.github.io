@@ -233,8 +233,8 @@ print(t.sum(dim = -1))
 # Max와 Argmax
 * Max는 tensor에 대해서 가장 큰 값을 의미합니다.
 * Argmax는 가장 큰 값의 index를 의미합니다.
-* .max() 함수를 인자(argument) 없이 호출하면, max 값만 반환해줍니다.
-* .max() 함수에 특정 차원을 인자로 넣어주면, max값과 argmax를 반환해줍니다.
+* max() 메서드를 인자(argument) 없이 호출하면, max 값만 반환해줍니다.
+* max() 메서드에 특정 차원을 인자로 넣어주면, max값과 argmax를 반환해줍니다.
 
 
 ```python
@@ -271,7 +271,7 @@ print("Argmax: ", t.max(dim = 0)[1])
 # 그 외 연산들
 
 ## View
-* View 함수는 tensor의 크기를 변경시켜주는(reshape) 역할을 합니다.
+* view() 메서드는 tensor의 크기를 변경시켜주는(reshape) 역할을 합니다.
 * -1은 보통 변동이 가장 심한 배치 사이즈에 사용할 수 있습니다.
 
 
